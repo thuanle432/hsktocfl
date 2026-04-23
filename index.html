@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard HSK - Học Tiếng Trung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Flashcard Học Tiếng Trung (HSK)</h1>
+        
+        <div class="level-selector">
+            <label for="hskLevel">Chọn cấp độ HSK:</label>
+            <select id="hskLevel">
+                <option value="tocfl1">HSK TOCFL1</option>
+            </select>
+        </div>
+
+        <!-- Tab navigation -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="all">Tất cả từ</button>
+            <button class="tab-btn" data-tab="favorite">⭐ Từ đã đánh dấu (<span id="fav-count">0</span>)</button>
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn">← Trước</button>
+            <span id="progress">1 / 50</span>
+            <button id="nextBtn">Tiếp →</button>
+        </div>
+
+        <div class="card" id="flashcard">
+            <div class="card-inner" id="cardInner">
+                <!-- Mặt trước: Hiện giản thể + phồn thể -->
+                <div class="card-front" id="front">
+                    <div class="hanzi-pair">
+                        <div class="hanzi-simplified" id="hanziSimplified">你好</div>
+                        <div class="hanzi-traditional" id="hanziTraditional">你好</div>
+                    </div>
+                    <div class="hint">Nhấn vào thẻ để lật</div>
+                </div>
+
+                <!-- Mặt sau: Pinyin + Nghĩa -->
+                <div class="card-back" id="back">
+                    <div class="pinyin" id="pinyin">nǐ hǎo</div>
+                    <div class="meaning" id="meaning">Xin chào</div>
+                    <button id="speakBtn" class="speak-btn">🔊 Nghe phát âm</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="flipBtn">🔄 Lật thẻ</button>
+            <button id="randomBtn">🎲 Ngẫu nhiên</button>
+            <button id="favoriteBtn" class="fav-btn">☆ Đánh dấu khó nhớ</button>
+        </div>
+
+        <div class="info">
+            <p>Click vào thẻ để lật • Nhấn ⭐ để đánh dấu từ khó nhớ</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
