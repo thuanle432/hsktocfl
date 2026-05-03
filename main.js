@@ -207,4 +207,5 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 
 // Khởi tạo
 loadVocabulary('hsk_tocfl');
+loadVocabulary('hsk_tocfl2');
 updateFavCount();
